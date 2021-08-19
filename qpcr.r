@@ -2,7 +2,7 @@ library(dplyr)
 
 # Do change the working dir
 dir <- getwd()
-raw <- read.csv(file.path(dir, "qPCRWranggled","20210817_2.csv"))
+raw <- read.csv(file.path(dir, "qPCRWranggled","Raw","20210817_2.csv"))
 
 # Specify the cell type
 Cell <- "Th2"
@@ -51,4 +51,4 @@ Sample <- Sample %>%
   mutate(relative_exp = 2^-(deltaCt)) %>%
   group_by(Target,Genotype)
 
-write.csv(Sample,file.path(dir,"qPCRWranggled",paste(Cell,"_summary.csv")))
+write.csv(Sample,file.path(dir,"qPCRWranggled","Result",paste(Cell,"_summary.csv")))
