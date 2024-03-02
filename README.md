@@ -12,7 +12,7 @@ source(here::here("./R/GetWranggledQpcrData.R"))
  df <- GetWranggledQpcrData(
 input = here::here("./data/example_experiment/20210817.xlsx"),
 experiment = here::here("./data/example_experiment/setting.xlsx"),
-output = here::here("./result/20210817_wranggled.xlsx"),
+output = here::here("./data/example_experiment/20210817_wranggled.xlsx"),
 Ct_max = 40,
 Tm_min = 60
 )
